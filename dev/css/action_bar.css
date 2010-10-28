@@ -1,0 +1,97 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+/* remember to define focus styles! */:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1;
+    color: black;
+    background: white;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+
+blockquote, q {
+    quotes: "" "";
+}
+
+body {
+    background-color: gray;
+    font-family: Arial;
+    color: black;
+} #topContainer {
+    width: 100%;
+}.actionBar {
+    float: left;
+    color: black;
+    width: 100%;
+    height: 20px; /*size of img background*/
+    background-image: url(../../img/top_bar.png);
+    background-repeat: repeat-x;
+    border: 0px solid black;
+    border-bottom-width: 1px;
+    font-size: 14px;
+} .actionBar div {
+    float: left;
+    /*height: 18px;*/
+	height: 100%;
+	width: 100%;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: default;
+}.actionBar div:hover {
+    background-color: blue; /*set absulute color*/
+    color: white;
+}.actionBar ul {
+    position: absolute;
+    top: 6px;
+    left: -1px;
+    list-style-type: none; /*disk*/
+    background-color: white;
+    border: 1px solid gray;
+    border-top: 1px solid black;
+    padding: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    z-index: 10000;
+}.actionBar li {
+    color: black;
+    list-style-type: none;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 20px;
+    padding-right: 10px;
+}.actionBar li:hover {
+    background-color: blue;
+    color: white;
+}

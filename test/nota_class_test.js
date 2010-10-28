@@ -1,0 +1,14 @@
+//notasList;
+//notasList.nota1234;
+var nt = notasList.nota1234;
+//console.log(nt.getX());
+//console.log(nt.getY());
+//console.log(nt.getContent());
+//console.log(nt.getWidth());
+//console.log(nt.getHeight());
+//x = nt.getX();
+//x.length;
+nt.setFontType('verdana');
+nt.setFontColor('blue');
+nt.setFontSize(18);
+nt.getAllFields();

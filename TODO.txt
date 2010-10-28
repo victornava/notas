@@ -1,0 +1,6 @@
+• make "try me button" work
+• set welcome notas to no new users
+
+PHP
+• sanitize all requests
+• verify login and singup fields

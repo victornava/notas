@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; utf-8">
+        <meta http-equiv="pragma" content="no-cache">
+        <link type="text/css" href="css/user_view2.css" rel="Stylesheet" />
+        <script src="../lib/js/jquery-1.3.2.min.js">
+        </script>
+        <title>Untitled Document</title>
+        <script>
+            $(document).ready(function(){
+                initActionBar();
+            });
+            
+            function initActionBar(){
+                $(".actionBarItemList").hide();
+                
+                $(".actionBarItem").each(function(){
+                    var item = $(this);
+                    var left = item.position().left - 1;
+                    //var top = item.position().top + item.height();
+                    
+                    item.children("ul").css({
+                        "left": left,
+                        "top": 4, //note: this shouldn't be a fixed number;
+                    });
+                    
+                    item.children("ul").children("li").click(function(){
+                        console.log($(this).attr("arg"));
+                    });
+                });
+                
+                $(".actionBarItem").mouseover(function(){
+                    $(this).children("ul").show();
+                    console.log("hover-in");
+                }).mouseout(function(){
+                    $(this).children("ul").hide();
+                    console.log("hover-out");
+                });
+                
+                /*$(".actionBarItem").hover(function(){
+                 $(this).children("ul").show();
+                 console.log("hover-in");
+                 }, function(){
+                 $(this).children("ul").hide();
+                 console.log("hover-out");
+                 });*/
+            }
+        </script>
+    </head>
+    <body>
+        <div id='topContainer'>
+            <div id='actionBar'>
+                <span id="@Notas" class='actionBarItem'><b>Notas</b>
+                    <ul class="actionBarItemList">
+                        <li>
+                            About
+                        </li>
+                        <li>
+                            Preferences
+                        </li>
+                        <li>
+                            Logout
+                        </li>
+                    </ul>
+                </span>
+                <span id='@File' class='actionBarItem'>File
+                    <ul class="actionBarItemList">
+                        <li>
+                            New Nota
+                        </li>
+                        <li>
+                            Save
+                        </li>
+                    </ul>
+                </span>
+                <span id="@Font-Type" class='actionBarItem'>Font-Type
+                    <ul class="actionBarItemList">
+                        <li arg="arial">
+                            Arial
+                        </li>
+                        <li arg="verdana">
+                            Verdana
+                        </li>
+                        <li arg="monaco">
+                            Monaco
+                        </li>
+                    </ul>
+                </span>
+                <span id="@Font-Size" class='actionBarItem'>Font-Size
+                    <ul class="actionBarItemList">
+                        <li arg="10px">
+                            10px
+                        </li>
+                        <li arg="14px">
+                            14px
+                        </li>
+                        <li arg="18px">
+                            18px
+                        </li>
+                        <li arg="22px">
+                            22px
+                        </li>
+                        <li arg="24px">
+                            24px
+                        </li>
+                        <li arg="28px">
+                            28px
+                        </li>
+                    </ul>
+                </span>
+                <span id="@Color" class='actionBarItem'>Color
+                    <ul class="actionBarItemList">
+                        <li arg="#FEF49C">
+                            <span class='miniNota' style='background-color: #FEF49C;'></span>
+                        </li>
+                        <li arg="pink">
+                            <span class='miniNota' style='background-color: pink'></span>
+                        </li>
+                        <li arg="lightblue">
+                            <span class='miniNota' style='background-color: lightblue'></span>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
