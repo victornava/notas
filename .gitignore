@@ -1,3 +1,4 @@
-.dbinfo
 .buildpath
+.DS_Store
+.project
 *.ini
