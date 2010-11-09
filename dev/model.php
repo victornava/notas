@@ -110,17 +110,18 @@ function signupUser($email, $password, $name, $screenName) {
 
 
 function getUserPrefs($userId) {
-	$dbCon = PDOConnection();
-	$cols = 'color, font_color, font_size, font_type , width, height, bg_color, bg_img';
-	try {
-		$sql = "SELECT $cols FROM user_prefs WHERE user_id = '$userId'";
-		$prefs = $dbCon->query($sql)->fetch(PDO::FETCH_ASSOC);
-		$reply = $prefs;
-	}
-	catch(Exception $e) {
-		$reply = array ('errors'=>$e->getMessage());
-	}
-	replyJson($reply);
+//	global $dbCon;
+//	$cols = 'color, font_color, font_size, font_type , width, height, bg_color, bg_img';
+//	try {
+//		$sql = "SELECT $cols FROM user_prefs WHERE user_id = '$userId'";
+//		$prefs = $dbCon->query($sql)->fetch(PDO::FETCH_ASSOC);
+//		$reply = $prefs;
+//	}
+//	catch(Exception $e) {
+//		$reply = array ('errors'=>$e->getMessage());
+//	}
+//	replyJson($reply);
+	echo '{"color":"rgb(255, 192, 203)","font_color":"black","font_size":"26","font_type":"courier","width":"279","height":"175","bg_color":null,"bg_img":null}';
 }
 
 function setUserPrefs($userId, $prefs) {
