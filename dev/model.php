@@ -21,7 +21,7 @@ try {
 } catch(Exception $e) {
 	echo $e->getMessage();
 	exit;
-}
+}	
 
 function loginUser($email, $pass) {
 	global $dbCon;
@@ -110,7 +110,7 @@ function signupUser($email, $password, $name, $screenName) {
 
 
 function getUserPrefs($userId) {
-	global $dbCon;
+	$dbCon = PDOConnection();
 	$cols = 'color, font_color, font_size, font_type , width, height, bg_color, bg_img';
 	try {
 		$sql = "SELECT $cols FROM user_prefs WHERE user_id = '$userId'";
