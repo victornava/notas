@@ -143,7 +143,6 @@ function setUserPrefs($userId, $prefs) {
 
 	try {
 		$sql = "UPDATE user_prefs SET $cols_Vals  WHERE(user_id=$userId)";
-		//echo ($sql);
 		$rowCount = $dbCon->exec($sql);
 		if ($rowCount > 0) {
 			$reply = array ('prefs_set'=>true);
