@@ -13,7 +13,7 @@ $view = new View();
     <body>
         <div style="margin:8px">
             <h1>Notas</h1>
-            <h3>Stikie notes on the web...</h3>
+            <h3>Stiky notes on the web...</h3>
             <div class="formWraper" style="float: left">
                 <form action="login_controller.php" method="post" accept-charset="utf-8">
                     <input type="hidden" name="action" value="login">
