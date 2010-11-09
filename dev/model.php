@@ -113,19 +113,19 @@ function getUserPrefs($userId) {
 	//global $dbCon;
 	$cols = 'color, font_color, font_size, font_type , width, height, bg_color, bg_img';
 	
-	try {
-		$dbCon = PDOConnection();
-		$sql = "SELECT $cols FROM user_prefs WHERE user_id = '$userId'";
-		$prefs = $dbCon->query($sql)->fetch(PDO::FETCH_ASSOC);
-		$reply = $prefs;
-	}
-	catch(Exception $e) {
-		$reply = array ('errors'=>$e->getMessage());
-	}
-	replyJson($reply);
+//	try {
+//		$dbCon = PDOConnection();
+//		$sql = "SELECT $cols FROM user_prefs WHERE user_id = '$userId'";
+//		$prefs = $dbCon->query($sql)->fetch(PDO::FETCH_ASSOC);
+//		$reply = $prefs;
+//	}
+//	catch(Exception $e) {
+//		$reply = array ('errors'=>$e->getMessage());
+//	}
+//	replyJson($reply);
 	
 	//FIXME make function work
-	//echo '{"color":"rgb(255, 192, 203)","font_color":"black","font_size":"26","font_type":"courier","width":"279","height":"175","bg_color":null,"bg_img":null}';
+	echo '{"color":"rgb(255, 192, 203)","font_color":"black","font_size":"26","font_type":"courier","width":"279","height":"175","bg_color":null,"bg_img":null}';
 }
 
 function setUserPrefs($userId, $prefs) {
