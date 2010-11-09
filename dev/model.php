@@ -149,7 +149,7 @@ function setUserPrefs($userId, $prefs) {
 			$reply = array ('prefs_set'=>true);
 		}
 		else {
-			$reply = array ('prefs_set'=>false);
+			$reply = array ('prefs_set'=>false, 'sql' => $sql);
 		}
 	}
 	catch(Exception $e) {
